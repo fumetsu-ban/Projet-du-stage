@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EntrepotController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/Entrepot', [EntrepotController::class, 'index'])->name('entrepots.index');
+Route::get('/Entrepot/create', [EntrepotController::class, 'create'])->name('entrepots.create');
+Route::post('/Entrepot/store', [EntrepotController::class, 'store'])->name('store');
+

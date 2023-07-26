@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Entrepot extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'libelle',
+        'adresse',
+        'capacite_max',
+        'type',
+    ];
 }
